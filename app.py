@@ -13,9 +13,9 @@ def home():
            model = pickle.load(f)    
         result=model.predict([[FS,FU]])
         if result[0]=="YES":
-            return render_template('home.html',data=["Sorry you might have diabeties","red"])
+            return render_template('home.html',data=["Sorry you might have diabetes","red"])
         else:
-            return render_template('home.html',data=["Congratulations You dont have diabetes","green"])    
+            return render_template('home.html',data=["Congratulations! You dont have diabetes","green"])    
     else:
         return render_template('home.html')
 
